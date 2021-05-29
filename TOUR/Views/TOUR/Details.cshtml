@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="row">
+    <div class="thumbnail">
+        <img src="~/Images/@Model.anhbia" style="text-align:center; height:200px" />
+    </div>
+    <div class="col-sm-9" style="color: black; font-size:16px;padding:5px;background-color:white;">
+        <p style="font-size:30px;color:black;">@Model.tentour</p>
+
+        <p style="font-size:16px;">Mô tả: @Model.mota</p>
+        <p style="font-size:30px;font-weight:bold">Giá: @string.Format("{0:#,##0.##}", Model.gia) VND </p>
+    </div>
+</div>
+
