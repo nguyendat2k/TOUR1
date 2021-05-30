@@ -128,6 +128,12 @@ create table KhachLe(
 	HoTenKL nvarchar(30),
 	Primary Key(MaKhachLe)
 )
+create table Admin(
+	UserAdmin varchar(5),
+	PassAdmin varchar(20),
+	HoTen nvarchar(50),
+	Primary Key(UserAdmin)
+)
 
 create table HoaDon(
 	MaHoaDon varchar(5),
@@ -252,7 +258,7 @@ select * from KhachSan
 select * from Tour
 go
 
-create trigger ma_tour
+Create trigger ma_tour
 on Tour
 instead of insert
 as
@@ -269,16 +275,16 @@ begin
 	set @matour='T'+@STT_MOI
 	print @matour
 	
-	insert into Tour(MaTour,TenTour,SoNgay,Gia,NgayKhoiHanh,Anhbia)
-	values (@matour, (select TenTour from inserted),(select SoNgay from inserted),(select Gia from inserted),(select NgayKhoiHanh from inserted),(select Anhbia from inserted))
+	insert into Tour(MaTour,TenTour,MoTa,SoNgay,Gia,NgayKhoiHanh,Anhbia)
+	values (@matour, (select TenTour from inserted),(select MoTa from inserted),(select SoNgay from inserted),(select Gia from inserted),(select NgayKhoiHanh from inserted),(select Anhbia from inserted))
 end
 Go
-insert into Tour(TenTour,SoNgay,Gia,NgayKhoiHanh,Anhbia)
-values(N'ĐÀ LẠT',3,'19790000','20200630','DALAT.png')
-insert into Tour(TenTour,SoNgay,Gia,NgayKhoiHanh,Anhbia)
-values(N'PHÚ QUỐC',3,'19790000','20200630','PHUQUOC.png')
-insert into Tour(TenTour,SoNgay,Gia,NgayKhoiHanh,Anhbia)
-values(N'VỊNH HẠ LONG',3,'19790000','20200630','VINHHALONG.png')
+insert into Tour(TenTour,MoTa,SoNgay,Gia,NgayKhoiHanh,Anhbia)
+values(N'ĐÀ LẠT',N'1 Tour du lịch đầy hứa hẹn',3,'19790000','20200630','DALAT.png')
+insert into Tour(TenTour,MoTa,SoNgay,Gia,NgayKhoiHanh,Anhbia)
+values(N'PHÚ QUỐC',N'1 Tour du lịch đầy hứa hẹn',3,'19790000','20200630','PHUQUOC.png')
+insert into Tour(TenTour,MoTa,SoNgay,Gia,NgayKhoiHanh,Anhbia)
+values(N'VỊNH HẠ LONG',N'1 Tour du lịch đầy hứa hẹn',3,'19790000','20200630','VINHHALONG.png')
   	 
 select * from Tour
 

@@ -5,21 +5,20 @@
     ViewBag.Title = "Tour";
     Layout = "~/Views/Shared/Layout_Admin.cshtml";
 }
-@helper Truncate(string input, int length)
-{
-    if (input.Length < length)
-    {
-        @input}
-    else
-    {
-        @input.Substring(0, length)<text>....</text>
-    }
-}
+
 <h2>Tour</h2>
 
 <p>
-    @Html.ActionLink("Thêm tour", "Create")
+    @Html.ActionLink("Thêm tour", "Themmoitour")
 </p>
+@using (Html.BeginForm("Tour", "ADMIN"))
+{
+    <b>Search by:</b> @Html.RadioButton("searchby", "tentour")<text>Tên tour</text>
+    @Html.RadioButton("searchby", "songay")<text>Số ngày </text>
+    <br />
+    @Html.TextBox("search")
+    <input type="submit" value="Search" />
+}
 <table class="table">
     <tr>
         <th style="width:200px">Tên tour</th>
@@ -28,7 +27,7 @@
         <th style="width:200px">Giá </th>
         <th style="width:200px">Ngày khởi hành </th>
         <th style="width:200px">Ảnh </th>
-        
+
     </tr>
 
     @foreach (var item in Model)
@@ -38,7 +37,7 @@
                 @Html.DisplayFor(modelItem => item.TenTour)
             </td>
             <td>
-                @Truncate(item.MoTa, 100)
+                @Html.DisplayFor(modelItem => item.MoTa)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SoNgay)
@@ -53,9 +52,9 @@
                 <img style="width:100px;height:100px" src="@Url.Content("~/Images/"+item.Anhbia)" />
             </td>
             <td>
-                @Html.ActionLink("Sửa", "Edit", new { id = item.MaTour }) |
-                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaTour }) |
-                @Html.ActionLink("Xóa", "Delete", new { id = item.MaTour })
+                @Html.ActionLink("Sửa", "Suatour", new { id = item.MaTour.Trim() }) |
+                @Html.ActionLink("Chi tiết", "Detail", new { id = item.MaTour.Trim() }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.MaTour.Trim() })
             </td>
         </tr>
     }

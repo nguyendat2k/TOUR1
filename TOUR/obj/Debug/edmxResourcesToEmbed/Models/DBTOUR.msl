@@ -179,8 +179,8 @@
       <EntityTypeMapping TypeName="QLDatTourModel.Admin">
         <MappingFragment StoreEntitySet="Admin">
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
-          <ScalarProperty Name="Pass" ColumnName="Pass" />
-          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="PassAdmin" ColumnName="PassAdmin" />
+          <ScalarProperty Name="UserAdmin" ColumnName="UserAdmin" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

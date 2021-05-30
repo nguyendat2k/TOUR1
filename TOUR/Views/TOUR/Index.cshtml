@@ -4,14 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 <body>
     @foreach (var tour in Model)
      {
      <div class="col-sm-4 col-sm-4 col-sm-4" style="text-align:center;padding:10px; margin-top:1px;">
         <div class="thumbnail">
             <div>
-                <a href="@Url.Action("Details","TOUR",new { id = tour.MaTour })">
+                <a href="@Url.Action("Details","TOUR",new { id = tour.MaTour.Trim() })">
                     <img src="~/Images/@tour.Anhbia" width="250" style="text-align:center; height:200px" />
                 </a>
                     </div>

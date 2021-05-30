@@ -211,10 +211,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\VTRAVEL.png" />
     <Content Include="Models\DBTOUR.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DBTOUR.Context.cs</LastGenOutput>
       <DependentUpon>DBTOUR.edmx</DependentUpon>
+      <LastGenOutput>DBTOUR.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\DBTOUR.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -252,9 +253,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\TOUR\Index.cshtml" />
     <Content Include="Views\TOUR\Details.cshtml" />
     <Content Include="Views\Shared\Layout_Admin.cshtml" />
@@ -262,10 +260,11 @@
     <Content Include="Views\ADMIN\Tour.cshtml" />
     <Content Include="Views\ADMIN\Themmoitour.cshtml" />
     <Content Include="Views\ADMIN\Detail.cshtml" />
+    <Content Include="Views\ADMIN\Suatour.cshtml" />
+    <Content Include="Views\ADMIN\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

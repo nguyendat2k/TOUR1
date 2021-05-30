@@ -76,7 +76,6 @@ C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\System.Web.W
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\Newtonsoft.Json.xml
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\Antlr3.Runtime.pdb
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.csprojAssemblyReference.cache
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.csproj.CoreCompileInputs.cache
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.csproj.CopyComplete
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.dll
@@ -85,3 +84,4 @@ C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\PagedList.dl
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\PagedList.Mvc.dll
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\PagedList.xml
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\PagedList.Mvc.xml
+C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.csprojAssemblyReference.cache

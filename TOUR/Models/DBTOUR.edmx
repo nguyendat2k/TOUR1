@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QLDatTourModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLDatTourModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admin">
           <Key>
-            <PropertyRef Name="User" />
+            <PropertyRef Name="UserAdmin" />
           </Key>
-          <Property Name="User" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Pass" Type="nvarchar" MaxLength="50" />
-          <Property Name="HoTen" Type="nvarchar(max)" />
+          <Property Name="UserAdmin" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="PassAdmin" Type="varchar" MaxLength="20" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Chuyen">
           <Key>
@@ -855,11 +855,11 @@
         </EntityContainer>
         <EntityType Name="Admin">
           <Key>
-            <PropertyRef Name="User" />
+            <PropertyRef Name="UserAdmin" />
           </Key>
-          <Property Name="User" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserAdmin" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="PassAdmin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1045,8 +1045,8 @@
             <EntityTypeMapping TypeName="QLDatTourModel.Admin">
               <MappingFragment StoreEntitySet="Admin">
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
-                <ScalarProperty Name="Pass" ColumnName="Pass" />
-                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="PassAdmin" ColumnName="PassAdmin" />
+                <ScalarProperty Name="UserAdmin" ColumnName="UserAdmin" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1066,7 +1066,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
