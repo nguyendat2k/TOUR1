@@ -364,5 +364,14 @@
       <End Role="PhuongTien" EntitySet="PhuongTiens" />
       <End Role="Tour" EntitySet="Tours" />
     </AssociationSet>
+    <EntitySet Name="Admins" EntityType="QLDatTourModel.Admin" />
   </EntityContainer>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="User" />
+    </Key>
+    <Property Name="User" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

@@ -81,3 +81,7 @@ C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.c
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.csproj.CopyComplete
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.dll
 C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\obj\Debug\TOUR.pdb
+C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\PagedList.dll
+C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\PagedList.Mvc.dll
+C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\PagedList.xml
+C:\Users\ACER\Documents\ĐỒ ÁN + WEB NC + PTTKHTTT\TOUR\TOUR\bin\PagedList.Mvc.xml

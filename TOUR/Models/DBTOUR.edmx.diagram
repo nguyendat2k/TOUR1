@@ -32,6 +32,7 @@
         <AssociationConnector Association="QLDatTourModel.O" ManuallyRouted="false" />
         <AssociationConnector Association="QLDatTourModel.PhuTrach" ManuallyRouted="false" />
         <AssociationConnector Association="QLDatTourModel.SuDung" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QLDatTourModel.Admin" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

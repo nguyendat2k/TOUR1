@@ -175,5 +175,14 @@
         <ScalarProperty Name="MaTour" ColumnName="MaTour" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="QLDatTourModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="User" ColumnName="User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

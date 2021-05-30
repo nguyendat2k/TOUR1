@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+}
+
+<html>
+<body>
+    <div class="header-w31">
+        <h1>ĐĂNG NHẬP </h1>
+    </div>
+
+    <div class="main-w3layouts-agileinfo">
+
+        <div class="wthree-form">
+            <h2>Điền thông đầy đủ thông tin</h2>
+            <h3 style="color:red;text-align:center">@ViewBag.Thongbao</h3>
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true);
+                <div class="form-sub-w3">
+                    <input type="text" name="Username" placeholder="Username " required="" />
+                    <div class="icon-w3">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    @ViewData["Loi1"]
+                </div>
+                <div class-"form-sub-w3">
+                    <input type="password" name="Password" placeholder="Password" required="" />
+                    <div class="icon-w3">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </div>
+                    @ViewData["Loi2"]
+                </div>
+                <div class="clear">
+                </div>
+                <div class="submit-agileits">
+                    <input type="submit" value="Đăng nhập">
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
