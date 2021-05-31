@@ -59,12 +59,12 @@ namespace TOUR.Controllers
             return View(db.Tours.ToList().OrderBy(n => n.MaTour).ToPagedList(pageNumber, pageSize));
         }
 
-        public ActionResult Themmoitour()
+        public ActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Themmoitour(Tour tour, HttpPostedFileBase fileupload)
+        public ActionResult Create(Tour tour, HttpPostedFileBase fileupload)
         {
             if (fileupload == null)
             {
@@ -104,7 +104,7 @@ namespace TOUR.Controllers
             }
             return View(tour);
         }
-        public ActionResult Suatour(string id)
+        public ActionResult Edit(string id)
         {
 
             Tour tour = db.Tours.SingleOrDefault(n => n.MaTour == id);
@@ -116,12 +116,12 @@ namespace TOUR.Controllers
             return View(tour);
         }
         [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult Suatour([Bind(Include = "TenTour,MoTa,SoNgay,Gia,NgayKhoiHanh,Anhbia")] Tour tour, HttpPostedFileBase fileupload)
+
+        public ActionResult Edit( Tour tour, HttpPostedFileBase fileupload)
         {
             try
             {
-                if (fileupload == null && fileupload.ContentLength > 0)
+                if (fileupload != null && fileupload.ContentLength > 0)
                 {
                     var filename = Path.GetFileName(fileupload.FileName);
                     var path = Path.Combine(Server.MapPath("~/Images"), filename);
@@ -141,26 +141,46 @@ namespace TOUR.Controllers
             }
             catch
             {
-                return View(tour);
+                return View();
             }
         }
-        public ActionResult Delete(string id)
+     public ActionResult Delete(string id)
         {
-            var tour = db.Tours.Select(p => p).Where(p => p.MaTour == id).FirstOrDefault();
-            return View(tour);
+            Tour t = db.Tours.SingleOrDefault(n => n.MaTour == id);
+            if(t==null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(t);
         }
         [HttpPost]
-        public ActionResult Delete(string id, Tour s)
+        public ActionResult DeleteConfirm(string MaTour)
         {
-            
-                s = db.Tours.Select(p => p).Where(p => p.MaTour == id).FirstOrDefault();
-                {
-                    db.Entry(s).State = EntityState.Deleted;
-                    db.SaveChanges();
-                }
-                return RedirectToAction("Tour", "ADMIN");
+            /*try
+            {
+                tour = db.Tours.SingleOrDefault(n => n.MaTour == id);
+                db.Entry(tour).State = EntityState.Deleted;
+                db.SaveChanges();
+                return RedirectToAction("Tour");
             }
-
+            catch
+            {
+                return View();
+            }*/
+            try
+            {
+                Tour tour = db.Tours.Find(MaTour);
+                db.Tours.Remove(tour);
+                db.SaveChanges();
+                return RedirectToAction("Tour");
+            }
+            catch
+            {
+                ViewBag.Error = "Server can not remove";
+                return RedirectToAction("Delete", new { id = MaTour.Trim() });
+            }
+        }
         
     }
 }

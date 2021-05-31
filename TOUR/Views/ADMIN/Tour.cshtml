@@ -9,12 +9,11 @@
 <h2>Tour</h2>
 
 <p>
-    @Html.ActionLink("Thêm tour", "Themmoitour")
+    @Html.ActionLink("Thêm tour", "Create")
 </p>
 @using (Html.BeginForm("Tour", "ADMIN"))
 {
     <b>Search by:</b> @Html.RadioButton("searchby", "tentour")<text>Tên tour</text>
-    @Html.RadioButton("searchby", "songay")<text>Số ngày </text>
     <br />
     @Html.TextBox("search")
     <input type="submit" value="Search" />
@@ -52,7 +51,7 @@
                 <img style="width:100px;height:100px" src="@Url.Content("~/Images/"+item.Anhbia)" />
             </td>
             <td>
-                @Html.ActionLink("Sửa", "Suatour", new { id = item.MaTour.Trim() }) |
+                @Html.ActionLink("Sửa", "Edit", new { id = item.MaTour.Trim() }) |
                 @Html.ActionLink("Chi tiết", "Detail", new { id = item.MaTour.Trim() }) |
                 @Html.ActionLink("Xóa", "Delete", new { id = item.MaTour.Trim() })
             </td>

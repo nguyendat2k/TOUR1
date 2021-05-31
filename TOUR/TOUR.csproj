@@ -258,10 +258,10 @@
     <Content Include="Views\Shared\Layout_Admin.cshtml" />
     <Content Include="Views\ADMIN\Login.cshtml" />
     <Content Include="Views\ADMIN\Tour.cshtml" />
-    <Content Include="Views\ADMIN\Themmoitour.cshtml" />
     <Content Include="Views\ADMIN\Detail.cshtml" />
-    <Content Include="Views\ADMIN\Suatour.cshtml" />
     <Content Include="Views\ADMIN\Delete.cshtml" />
+    <Content Include="Views\ADMIN\Edit.cshtml" />
+    <Content Include="Views\ADMIN\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

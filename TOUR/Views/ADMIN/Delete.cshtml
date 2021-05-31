@@ -12,6 +12,16 @@
     <h4>Tour</h4>
     <hr />
     <dl class="dl-horizontal">
+        @if (ViewBag.Error != null)
+        {
+            <dt>
+                Error
+            </dt>
+
+            <dd>
+                @ViewBag.Error 
+            </dd>
+        }
         <dt>
             @Html.DisplayNameFor(model => model.MaTour)
         </dt>
@@ -70,12 +80,12 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm("DeleteConfirm", "ADMIN",FormMethod.Post)) {
         @Html.AntiForgeryToken()
-
+        @Html.HiddenFor(model => model.MaTour)
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Back to List", "Tour")
         </div>
     }
 </div>
