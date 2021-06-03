@@ -134,6 +134,12 @@ create table Admin(
 	HoTen nvarchar(50),
 	Primary Key(UserAdmin)
 )
+create table TaiKhoan(
+	IdUser varchar(5),
+	UserName char(15),
+	PassUser char(30),
+	Primary Key(IdUser)
+)
 
 create table HoaDon(
 	MaHoaDon varchar(5),
@@ -191,7 +197,7 @@ select * from HangKhachSan
 select * from PhuongTien
 go
 
-create trigger phuong_tien
+/*create trigger phuong_tien
 on PhuongTien
 instead of insert
 as
@@ -215,7 +221,7 @@ Go
 insert into PhuongTien(TenPT)
 values(N'MÁY BAY')
 insert into PhuongTien(TenPT)
-values(N'XE KHÁCH')
+values(N'XE KHÁCH')*/
   	 
 select * from PhuongTien
 
@@ -224,7 +230,7 @@ select * from PhuongTien
 select * from KhachSan
 go
 
-create trigger ten_khach_san
+/*create trigger ten_khach_san
 on KhachSan
 instead of insert
 as
@@ -498,6 +504,32 @@ begin
 	values (@machuyen, (select NgayDi from inserted),(select MaHDV from inserted),(select MaTour from inserted))
 end
 Go
+---mã tự động tài khoản
+select * from TaiKhoan
+go
+
+create trigger ma_taikhoan
+on TaiKhoan
+instead of insert
+as
+begin
+	declare @stt int
+	declare @matk char(5)
+	declare @STT_MOI char(3)
+	set @stt=(select COUNT(*) from Chuyen)
+	set @stt=@stt+1
+	if(@stt<10)
+		set @STT_MOI='00'+CAST(@stt as CHAR(3))
+	else
+		set @STT_MOI=CAST(@stt as CHAR(3))
+	set @matk='TK'+@STT_MOI
+	print @matk
+	
+	insert into TaiKhoan(IdUser,UserName,PassUser)
+	values (@matk, (select UserName from inserted),(select PassUser from inserted))
+end
+Go
+*/
 
 
 
