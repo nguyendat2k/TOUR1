@@ -9,7 +9,7 @@ namespace TOUR.Controllers
 {
     public class TOURController : Controller
     {
-        QLDatTourEntities db = new QLDatTourEntities();
+        QLDatTourEntities1 db = new QLDatTourEntities1();
         // GET: TOUR
         private List<Tour> LayTourMoi(int soluong)
         {

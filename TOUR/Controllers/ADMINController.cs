@@ -14,7 +14,7 @@ namespace TOUR.Controllers
 {
     public class ADMINController : Controller
     {
-        QLDatTourEntities db = new QLDatTourEntities();
+        QLDatTourEntities1 db = new QLDatTourEntities1();
         // GET: ADMIN
         public ActionResult Index()
         {
@@ -59,9 +59,24 @@ namespace TOUR.Controllers
             return View(db.Tours.ToList().OrderBy(n => n.MaTour).ToPagedList(pageNumber, pageSize));
         }
 
-        public ActionResult Create()
+        public ActionResult Create(string id = "")
         {
-            return View();
+            Tour emp = new Tour();
+            var lasttour = db.Tours.OrderByDescending(c => c.MaTour).FirstOrDefault();
+            if (id != "")
+            {
+                emp = db.Tours.Where(x => x.MaTour == id).FirstOrDefault<Tour>();
+            }
+            else if (lasttour == null)
+            {
+                emp.MaTour = "T001";
+            }
+            else
+            {
+                emp.MaTour = "T" + (Convert.ToInt32(lasttour.MaTour.Substring(2, lasttour.MaTour.Length - 2)) + 1).ToString("D3");
+            }
+            return View(emp);
+
         }
         [HttpPost]
         public ActionResult Create(Tour tour, HttpPostedFileBase fileupload)

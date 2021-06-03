@@ -1,0 +1,42 @@
+﻿@model TOUR.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .field-validation-error {
+        color: red;
+    }
+</style>
+<h2>ĐĂNG NHẬP</h2>
+@using (Html.BeginForm("DangNhap", "ACCOUNT"))
+{
+    @Html.AntiForgeryToken()
+    <table>
+        <tr>
+            <td>@Html.LabelFor(model => model.UserName)</td>
+            <td>@Html.TextBoxFor(model => model.UserName, new { style = "field-validation-error" })</td>
+            <td>@Html.ValidationMessageFor(model => model.UserName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.PassUser)</td>
+            <td>@Html.EditorFor(model => model.PassUser)</td>
+            <td>@Html.ValidationMessageFor(model => model.PassUser)</td>
+            @if (ViewBag.ErrorInfo == null)
+            {
+                <p>@ViewBag.ErrorInfo</p>
+            }
+        </tr>
+        <tr>
+            <td> </td>
+            <td><input type="submit" value="Login" /></td>
+        </tr>
+    </table>
+}
+<p><button>@Html.ActionLink("DangKy", "ACCOUNT")</button></p>
+
+
+
+
