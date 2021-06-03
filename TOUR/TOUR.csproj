@@ -199,6 +199,7 @@
     <Compile Include="Models\Tour.cs">
       <DependentUpon>DBTOUR.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewKhachSan.cs" />
     <Compile Include="Models\ViewTour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -263,10 +264,10 @@
     <Content Include="Views\ADMIN\Delete.cshtml" />
     <Content Include="Views\ADMIN\Edit.cshtml" />
     <Content Include="Views\ADMIN\Create.cshtml" />
+    <Content Include="Views\KHACHSAN\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\KHACHSAN\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<TOUR.Models.KhachSan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2> KHÁCH SẠN </h2>
+<body>
+    @foreach (var ks in Model)
+    {
+        <div class="col-sm-4 col-sm-4 col-sm-4" style="text-align:center;padding:10px; margin-top:1px;">
+            <div class="thumbnail">
+                <div>
+                    <a href="@Url.Action("Details","KHACHSAN",new { id = ks.MaKS.Trim() })">
+                        <img src="~/Images/@ks.AnhKS" width="250" style="text-align:center; height:200px" />
+                    </a>
+                </div>
+                <div style="text-align:center">
+                    <h4 id="tentour">@ks.TenKS</h4>
+                </div>
+            </div>
+        </div>
+    }
+</body>
+
