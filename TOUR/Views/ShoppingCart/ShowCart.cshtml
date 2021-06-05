@@ -1,0 +1,59 @@
+﻿@model TOUR.Models.Cart
+
+@{
+    ViewBag.Title = "ShowCart";
+    Layout = "~/Views/Shared/Layout_Order.cshtml";
+}
+
+<h2>Giỏ Hàng</h2>
+<a href="@Url.Action("Index","TOUR")">Tiếp tục mua hàng</a>
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên tour</th>
+                <th>Hình tour</th>
+                <th>Giá</th>
+                <th>Số lượng khách</th>
+                <th>Thành tiền</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                decimal total = item.quantity * (decimal)item.tour.Gia.Value;
+                <tr>
+                    <td>@Html.DisplayFor(model => item.tour.TenTour) </td>
+                    <td><img src="~/Images/@item.tour.Anhbia" style="width:70px;height:100px;text-align:right;" /></td>
+                    <td>@Html.DisplayFor(model => item.tour.Gia) </td>
+                    <td>
+                        @using (Html.BeginForm("Update_Cart_Quantity", "ShoppingCart"))
+                        {
+                            <input type="hidden" value="@item.tour.MaTour" name="idTour" />
+                            <input type="number" value="@item.quantity" name="cartQuantity" />
+                            <input type="submit" value="Update" />
+                        }
+                    </td>
+                    <td>@total</td>
+                    <td>
+                        <a href="/ShoppingCart/RemoveCart/@item.tour.MaTour">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" style="text-align:right;"> Tổng tiền: @Model.Total_money()</td>
+            </tr>
+
+
+        </tfoot>
+    </table>
+    <div class="button-row d-flex mt-4">
+        @Html.ActionLink("TIẾP TỤC", "Create", "PhieuDoan")
+
+    </div>
+}
+

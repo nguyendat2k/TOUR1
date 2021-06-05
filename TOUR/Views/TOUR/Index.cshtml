@@ -8,17 +8,18 @@
     @foreach (var tour in Model)
      {
      <div class="col-sm-4 col-sm-4 col-sm-4" style="text-align:center;padding:10px; margin-top:1px;">
-        <div class="thumbnail">
-            <div>
-                <a href="@Url.Action("Details","TOUR",new { id = tour.MaTour.Trim() })">
-                    <img src="~/Images/@tour.Anhbia" width="250" style="text-align:center; height:200px" />
-                </a>
-                    </div>
-            <div style="text-align:center">
-               <h4 id="tentour">@tour.TenTour</h4>
-                <h4 id="gia">Giá: @tour.Gia VNĐ</h4>
-            </div>
-        </div>    
+         <div class="thumbnail">
+             <div>
+                 <a href="@Url.Action("Details","TOUR",new { id = tour.MaTour.Trim() })">
+                     <img src="~/Images/@tour.Anhbia" width="250" style="text-align:center; height:200px" />
+                 </a>
+             </div>
+             <div style="text-align:center">
+                 <h4 id="tentour">@tour.TenTour</h4>
+                 <h4 id="gia">Giá: @tour.Gia VNĐ</h4>
+             </div>
+            
+         </div>    
         </div>
      }
 </body>

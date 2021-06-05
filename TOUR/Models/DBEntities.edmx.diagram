@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="399c95b0d88d46e69f145dcd0fbb38c3" Name="Diagram1">
+        <EntityTypeShape EntityType="QLDatTourModel.Admin" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.Chuyen" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.DiaDiemThamQuan" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.DungChan" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.HangKhachSan" Width="1.5" PointX="1.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.HoaDon" Width="1.5" PointX="10.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.HuongDanVien" Width="1.5" PointX="13.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.KhachLe" Width="1.5" PointX="8.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.KhachSan" Width="1.5" PointX="3.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.NhanVien" Width="1.5" PointX="9" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.PhieuDoan" Width="1.5" PointX="11.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.PhuongTien" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.ThanhVien" Width="1.5" PointX="13.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLDatTourModel.Tour" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="QLDatTourModel.FK__Chuyen__MaHDV__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__Chuyen__MaTour__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__DungChan__MaTham__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__DungChan__MaPT__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__DungChan__MaTour__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__KhachSan__MaHang__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__HoaDon__MaKhachL__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__PhieuDoan__MaNV__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__PhieuDoan__MaTou__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.FK__ThanhVien__MaDoa__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.DangKi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.O" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.PhuTrach" ManuallyRouted="false" />
+        <AssociationConnector Association="QLDatTourModel.SuDung" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QLDatTourModel.TaiKhoan" Width="1.5" PointX="5.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

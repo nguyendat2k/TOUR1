@@ -98,6 +98,11 @@
                 text-decoration: none;
                 color: black;
             }
+
+        li.format-hello {
+            padding-top: 15px;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -145,24 +150,28 @@
                             <a class="dropdown-item" href="#">XE</a>
                         </div>
                     </li>
-
-                    @if (Session["taikhoan"] != null)
-                    {
-                        @Html.Label("Chào bạn: ")@Session["taikhoan"]
-                        @Html.Action("GioHangPartial", "GioHang")
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>
-                        @Html.ActionLink("Đăng xuất ", "DangXuat", "KhachHang", null, new { @class = "a" })
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                       <img src="@Url.Content("~/Images/cart.jpg")"style="height:30px;width:30px;margin-top:10px;"/>
+                        @Html.Action("BagCart","ShoppingCart")
+                    </li>
+                    <li class="format-hello">
+                        @if (Session["UserName"] != null)
+                        {
+                        <li><p style="color:blue;font-weight:bold;margin-top:15px;"> Xin Chào @Session["UserName"]</p></li>
+                        <li>@Html.ActionLink("ĐĂNG XUẤT", "DangXuat", "ACCOUNT")</li>
                     }
                     else
                     {
-                        <i class="fa fa-sign-in" aria-hidden="true"></i>
-                        @Html.ActionLink("ĐĂNG KÝ", "DangKy", "KhachHang", null, new { @class = "a" })
-
-                        @Html.ActionLink("ĐĂNG NHẬP", "DangNhap", "KhachHang", null, new { @class = "a" })
-          
+                        <li><p style="color:blue;font-weight:bold;margin-top:15px;"> Xin Chào </p></li>
+                        <li>@Html.ActionLink("ĐĂNG KÝ", "DangKy", "ACCOUNT")</li>
+                        <li>@Html.ActionLink("ĐĂNG NHẬP", "Index", "ACCOUNT")</li>
                     }
-                </ul>
-            </div>
+                        </li>
+
+                    </ul>
+                </div>
         </div>
         <span class="nav-indicator"></span>
     </nav>

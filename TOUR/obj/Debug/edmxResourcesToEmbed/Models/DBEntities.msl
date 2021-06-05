@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLDatTourModelStoreContainer" CdmEntityContainer="QLDatTourEntities1">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="QLDatTourModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="UserAdmin" ColumnName="UserAdmin" />
+          <ScalarProperty Name="PassAdmin" ColumnName="PassAdmin" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chuyens">
+      <EntityTypeMapping TypeName="QLDatTourModel.Chuyen">
+        <MappingFragment StoreEntitySet="Chuyen">
+          <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+          <ScalarProperty Name="NgayDi" ColumnName="NgayDi" />
+          <ScalarProperty Name="MaHDV" ColumnName="MaHDV" />
+          <ScalarProperty Name="MaTour" ColumnName="MaTour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiaDiemThamQuans">
+      <EntityTypeMapping TypeName="QLDatTourModel.DiaDiemThamQuan">
+        <MappingFragment StoreEntitySet="DiaDiemThamQuan">
+          <ScalarProperty Name="MaThamQuan" ColumnName="MaThamQuan" />
+          <ScalarProperty Name="TenDiaDiem" ColumnName="TenDiaDiem" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="AnhDiaDiem" ColumnName="AnhDiaDiem" />
+          <ScalarProperty Name="YNghia" ColumnName="YNghia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DungChans">
+      <EntityTypeMapping TypeName="QLDatTourModel.DungChan">
+        <MappingFragment StoreEntitySet="DungChan">
+          <ScalarProperty Name="MaThamQuan" ColumnName="MaThamQuan" />
+          <ScalarProperty Name="MaTour" ColumnName="MaTour" />
+          <ScalarProperty Name="MaPT" ColumnName="MaPT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HangKhachSans">
+      <EntityTypeMapping TypeName="QLDatTourModel.HangKhachSan">
+        <MappingFragment StoreEntitySet="HangKhachSan">
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+          <ScalarProperty Name="TenHang" ColumnName="TenHang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDons">
+      <EntityTypeMapping TypeName="QLDatTourModel.HoaDon">
+        <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="ConLai" ColumnName="ConLai" />
+          <ScalarProperty Name="TienDatCoc" ColumnName="TienDatCoc" />
+          <ScalarProperty Name="NgayDangKi" ColumnName="NgayDangKi" />
+          <ScalarProperty Name="MaKhachLe" ColumnName="MaKhachLe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HuongDanViens">
+      <EntityTypeMapping TypeName="QLDatTourModel.HuongDanVien">
+        <MappingFragment StoreEntitySet="HuongDanVien">
+          <ScalarProperty Name="MaHDV" ColumnName="MaHDV" />
+          <ScalarProperty Name="TenHDV" ColumnName="TenHDV" />
+          <ScalarProperty Name="SDTHDV1" ColumnName="SDTHDV1" />
+          <ScalarProperty Name="SDTHDV2" ColumnName="SDTHDV2" />
+          <ScalarProperty Name="Luong" ColumnName="Luong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachLes">
+      <EntityTypeMapping TypeName="QLDatTourModel.KhachLe">
+        <MappingFragment StoreEntitySet="KhachLe">
+          <ScalarProperty Name="MaKhachLe" ColumnName="MaKhachLe" />
+          <ScalarProperty Name="CMNDKL" ColumnName="CMNDKL" />
+          <ScalarProperty Name="SDTKL1" ColumnName="SDTKL1" />
+          <ScalarProperty Name="SDTKL2" ColumnName="SDTKL2" />
+          <ScalarProperty Name="DiaChiKL" ColumnName="DiaChiKL" />
+          <ScalarProperty Name="HoTenKL" ColumnName="HoTenKL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachSans">
+      <EntityTypeMapping TypeName="QLDatTourModel.KhachSan">
+        <MappingFragment StoreEntitySet="KhachSan">
+          <ScalarProperty Name="MaKS" ColumnName="MaKS" />
+          <ScalarProperty Name="TenKS" ColumnName="TenKS" />
+          <ScalarProperty Name="DiaChiKS" ColumnName="DiaChiKS" />
+          <ScalarProperty Name="AnhKS" ColumnName="AnhKS" />
+          <ScalarProperty Name="MaHang" ColumnName="MaHang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanViens">
+      <EntityTypeMapping TypeName="QLDatTourModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuDoans">
+      <EntityTypeMapping TypeName="QLDatTourModel.PhieuDoan">
+        <MappingFragment StoreEntitySet="PhieuDoan">
+          <ScalarProperty Name="MaDoan" ColumnName="MaDoan" />
+          <ScalarProperty Name="TenCQ" ColumnName="TenCQ" />
+          <ScalarProperty Name="DiaChiCQ" ColumnName="DiaChiCQ" />
+          <ScalarProperty Name="SDTCQ" ColumnName="SDTCQ" />
+          <ScalarProperty Name="TenNĐD" ColumnName="TenNĐD" />
+          <ScalarProperty Name="NgayDi" ColumnName="NgayDi" />
+          <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
+          <ScalarProperty Name="MaTour" ColumnName="MaTour" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhuongTiens">
+      <EntityTypeMapping TypeName="QLDatTourModel.PhuongTien">
+        <MappingFragment StoreEntitySet="PhuongTien">
+          <ScalarProperty Name="MaPT" ColumnName="MaPT" />
+          <ScalarProperty Name="TenPT" ColumnName="TenPT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThanhViens">
+      <EntityTypeMapping TypeName="QLDatTourModel.ThanhVien">
+        <MappingFragment StoreEntitySet="ThanhVien">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="CMNDTV" ColumnName="CMNDTV" />
+          <ScalarProperty Name="DiaChiTV" ColumnName="DiaChiTV" />
+          <ScalarProperty Name="SDTTV1" ColumnName="SDTTV1" />
+          <ScalarProperty Name="SDTTV2" ColumnName="SDTTV2" />
+          <ScalarProperty Name="HoTenTV" ColumnName="HoTenTV" />
+          <ScalarProperty Name="MaDoan" ColumnName="MaDoan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tours">
+      <EntityTypeMapping TypeName="QLDatTourModel.Tour">
+        <MappingFragment StoreEntitySet="Tour">
+          <ScalarProperty Name="MaTour" ColumnName="MaTour" />
+          <ScalarProperty Name="TenTour" ColumnName="TenTour" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="SoNgay" ColumnName="SoNgay" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="NgayKhoiHanh" ColumnName="NgayKhoiHanh" />
+          <ScalarProperty Name="Anhbia" ColumnName="Anhbia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DangKi" TypeName="QLDatTourModel.DangKi" StoreEntitySet="DangKi">
+      <EndProperty Name="Chuyen">
+        <ScalarProperty Name="MaChuyen" ColumnName="MaChuyen" />
+      </EndProperty>
+      <EndProperty Name="HoaDon">
+        <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="O" TypeName="QLDatTourModel.O" StoreEntitySet="O">
+      <EndProperty Name="KhachSan">
+        <ScalarProperty Name="MaKS" ColumnName="MaKS" />
+      </EndProperty>
+      <EndProperty Name="Tour">
+        <ScalarProperty Name="MaTour" ColumnName="MaTour" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PhuTrach" TypeName="QLDatTourModel.PhuTrach" StoreEntitySet="PhuTrach">
+      <EndProperty Name="PhieuDoan">
+        <ScalarProperty Name="MaDoan" ColumnName="MaDoan" />
+      </EndProperty>
+      <EndProperty Name="HuongDanVien">
+        <ScalarProperty Name="MaHDV" ColumnName="MaHDV" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SuDung" TypeName="QLDatTourModel.SuDung" StoreEntitySet="SuDung">
+      <EndProperty Name="PhuongTien">
+        <ScalarProperty Name="MaPT" ColumnName="MaPT" />
+      </EndProperty>
+      <EndProperty Name="Tour">
+        <ScalarProperty Name="MaTour" ColumnName="MaTour" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="QLDatTourModel.TaiKhoan">
+        <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="PassUser" ColumnName="PassUser" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
